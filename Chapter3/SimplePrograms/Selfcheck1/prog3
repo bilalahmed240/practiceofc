@@ -1,0 +1,55 @@
+/*Describe the problem inputs and outputs and write the algorithm for a program
+that computes an employee’s gross salary given the hours worked and
+the hourly rate.
+In computing gross salary, what changes should you make to extend the payroll
+algorithm in Self-Check Exercise 1 to include overtime hours to be paid at
+1.5 times an employee’s normal hourly rate? Assume that overtime hours are
+entered separately
+Analysis:
+The employers number of hours will be multiplied by the hourly rate.
+Data Requirements :
+Problem Inputs :
+double num_of_hrs_worked.
+double hourly_rate.
+double overtime.
+Problem Output :
+double Salary
+Relevant Formula :
+pay = num_of hrs_of worked * hourly_rate 
+ot_pay = number of hrs_of_worked * (hourly_rate * 1.5)
+salary = pay + ot+pay
+Design :
+We will design the algorithms next
+Algorithm:
+1-Get the number of hours employer worked
+1.1Get the number of hours employer worked in overtime
+2-Get the hourly rate
+3-compute the salary
+4-Display the salary of employer
+step 3 refinement 
+computer num_of_hrs_worked over time and hourly rate 
+pay= num_of_hrs_worked * hourly_rate
+ot_pay = number of hrs worked in overtime  * (hourly_rate * 1.5)
+salary  =  pay + ot_pay
+Program:*/
+#include <stdio.h>
+
+int main(){
+    float num_of_hrs_worked, ot_hrs, hourly_rate, salary;
+    printf("please type number of hrs you worked:\n");
+    scanf("%f", &num_of_hrs_worked);
+    printf("please type number of hours you worked overtime\n");
+    scanf("%f", &ot_hrs);
+    printf("Please type hourly rate :\n");
+    scanf("%f", &hourly_rate);
+    salary = (num_of_hrs_worked * hourly_rate) + (ot_hrs * (hourly_rate * 1.5)) ;
+    printf("Your Salary will be %.3f"), salary;
+    
+    
+    
+    return 0;
+    
+}
+
+
+
